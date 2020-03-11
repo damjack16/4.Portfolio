@@ -1,0 +1,14 @@
+@import "home";
+@import "about";
+@import "technologies";
+@import "projects";
+@import "contact";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    overflow: hidden;
+    color: #fff
+}

@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="153.45" height="195" viewBox="0 0 153.45 195">
-  <g id="Logo" transform="translate(-601.55 -51)">
-    <path id="Polygon_1" data-name="Polygon 1" d="M97.5,0,130,51.157,97.5,102.315h-65L0,51.157,32.5,0Z" transform="translate(704 51) rotate(90)" fill="rgba(49,232,159,0.6)"/>
-    <path id="Polygon_2" data-name="Polygon 2" d="M97.5,0,130,51.225,97.5,102.45h-65L0,51.225,32.5,0Z" transform="translate(704 116) rotate(90)" fill="rgba(70,205,207,0.6)"/>
-    <path id="Polygon_3" data-name="Polygon 3" d="M97.5,0,130,51.157,97.5,102.315h-65L0,51.157,32.5,0Z" transform="translate(755 83) rotate(90)" fill="rgba(49,198,232,0.6)"/>
-    <text id="DJ" transform="translate(652.92 159.154)" font-size="31" font-family="Montserrat-Bold, Montserrat" font-weight="700"><tspan x="-20.956" y="0">DJ</tspan></text>
-  </g>
-</svg>
