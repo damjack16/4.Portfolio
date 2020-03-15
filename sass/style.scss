@@ -4,11 +4,20 @@
 @import "projects";
 @import "contact";
 
-* {
+// variables
+$title-size: 48px;
+$normal-p-size: 28px;
+$small-p-size: 16px;
+
+
+body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
-    overflow: hidden;
     color: #fff
+}
+
+section {
+    min-height: 100vh;
 }
