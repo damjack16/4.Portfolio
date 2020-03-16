@@ -8,6 +8,7 @@ $small-p-size: 16px;
     position: relative;
     background-image: url("../../img/home/bg_img_home.png");
     background-repeat: no-repeat;
+    background-size: cover;
     min-height: 100vh;
 
     .home__bgc {
@@ -29,11 +30,14 @@ $small-p-size: 16px;
 }
 
 .hamburger {
-    padding: 10px;
+    position: absolute;
+    top: 5%;
+    left: 5%;
     display: inline-block;
     cursor: pointer;
     background-color: transparent;
     border: 0;
+    padding: 0;
     margin: 0;
     transition: transform .3s .1s ease-in-out;
 
@@ -72,7 +76,7 @@ $small-p-size: 16px;
 
 // HAMBURGER ACTIVE
 .hamburger--active {
-    transform: translateX(80vw);
+    transform: translateX(85vw);
 
     .hamburger__box {
         .hamburger__inner {
@@ -92,12 +96,12 @@ $small-p-size: 16px;
 // MENU
 .menu {
     height: 100vh;
-    width: 80vw;
+    width: 90vw;
     background-color: #ABEDD8;
     position: absolute;
     top: 0;
     left: 0;
-    transform: translateX(-80vw);
+    transform: translateX(-90vw);
     color: #000;
     text-transform: uppercase;
     font-size: 20px;
@@ -118,4 +122,22 @@ $small-p-size: 16px;
 // MENU ACTIVE
 .menu--active {
     transform: translateX(0vw);
+    z-index: 999;
+}
+
+// ICONS
+.home__icons {
+    position: absolute;
+    top: calc(5% - 9px);
+    right: 10%;
+
+    .icon--github {
+        margin-right: 20px;
+    }
+}
+
+// LOGO
+.home__logo {
+    width: 128px;
+    height: 162px;
 }

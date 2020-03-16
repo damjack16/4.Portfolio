@@ -2,6 +2,7 @@
   position: relative;
   background-image: url("../../img/home/bg_img_home.png");
   background-repeat: no-repeat;
+  background-size: cover;
   min-height: 100vh;
 }
 
@@ -15,11 +16,14 @@
 }
 
 .hamburger {
-  padding: 10px;
+  position: absolute;
+  top: 5%;
+  left: 5%;
   display: inline-block;
   cursor: pointer;
   background-color: transparent;
   border: 0;
+  padding: 0;
   margin: 0;
   transition: transform .3s .1s ease-in-out;
 }
@@ -62,7 +66,7 @@
 }
 
 .hamburger--active {
-  transform: translateX(80vw);
+  transform: translateX(85vw);
 }
 
 .hamburger--active .hamburger__box .hamburger__inner {
@@ -79,12 +83,12 @@
 
 .menu {
   height: 100vh;
-  width: 80vw;
+  width: 90vw;
   background-color: #ABEDD8;
   position: absolute;
   top: 0;
   left: 0;
-  transform: translateX(-80vw);
+  transform: translateX(-90vw);
   color: #000;
   text-transform: uppercase;
   font-size: 20px;
@@ -104,6 +108,22 @@
 
 .menu--active {
   transform: translateX(0vw);
+  z-index: 999;
+}
+
+.home__icons {
+  position: absolute;
+  top: calc(5% - 9px);
+  right: 10%;
+}
+
+.home__icons .icon--github {
+  margin-right: 20px;
+}
+
+.home__logo {
+  width: 128px;
+  height: 162px;
 }
 
 body {
@@ -116,6 +136,11 @@ body {
 
 section {
   min-height: 100vh;
+}
+
+svg {
+  fill: #fff;
+  width: 39px;
 }
 
 /*# sourceMappingURL=style.css.map */
