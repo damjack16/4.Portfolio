@@ -1,12 +1,19 @@
 // variables
-$title-size: 48px;
+$title-size: 38px;
 $normal-p-size: 28px;
 $small-p-size: 16px;
+
+@mixin ham-line {
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+}
 
 // BACKGROUND
 .home {
     position: relative;
-    background-image: url("../../img/home/bg_img_home.png");
+    background-image: url('../img/home/bg_img_home.png');
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100vh;
@@ -22,12 +29,7 @@ $small-p-size: 16px;
 }
 
 // HAMBURGER
-@mixin ham-line {
-    width: 100%;
-    height: 2px;
-    background-color: #fff;
-    position: absolute;
-}
+
 
 .hamburger {
     position: absolute;
@@ -114,7 +116,12 @@ $small-p-size: 16px;
 
         .menu__item {
             margin-bottom: 20px;
-            width: 100%
+            width: 100%;
+
+            a {
+                text-decoration: none;
+                color: #000
+            }
         }
     }
 }
@@ -131,8 +138,16 @@ $small-p-size: 16px;
     top: calc(5% - 9px);
     right: 10%;
 
-    .icon--github {
-        margin-right: 20px;
+    .icon {
+        display: inline-block;
+
+        svg {
+            width: 39px;
+        }
+    }
+
+    .icon:nth-of-type(1) {
+        margin-right: 15px;
     }
 }
 
@@ -140,4 +155,17 @@ $small-p-size: 16px;
 .home__logo {
     width: 128px;
     height: 162px;
+    position: absolute;
+    top: 14%;
+    left: 5%;
+}
+
+// H1
+.title--home {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    line-height: 90px;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
 }

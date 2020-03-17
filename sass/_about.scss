@@ -1,0 +1,46 @@
+// variables
+$title-size: 38px;
+$normal-p-size: 28px;
+$small-p-size: 16px;
+
+
+.about {
+    display: flex;
+    flex-direction: column;
+    background-color: #3D84A8;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 135vh;
+
+    .about__p {
+        width: 80%;
+        text-align: center;
+        font-size: $normal-p-size;
+        line-height: 44px;
+
+        span {
+            font-weight: 700;
+        }
+    }
+
+    .about__icons {
+        width: 80%;
+        margin-bottom: 70px;
+
+        .icon {
+            position: relative;
+            display: inline-block;
+            top: 0;
+            left: 0;
+
+            svg {
+                width: 69px;
+                height: 69px;
+            }
+        }
+
+        .icon:nth-of-type(2) {
+            left: 50%;
+        }
+    }
+}

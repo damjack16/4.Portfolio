@@ -1,0 +1,65 @@
+// variables
+$title-size: 38px;
+$normal-p-size: 28px;
+$small-p-size: 16px;
+
+.technologies {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: #000;
+    background-image: url("../img/technologies/shape.svg"), url("../img/technologies/bg.svg");
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover, cover;
+    min-height: 120vh;
+
+    .technologies__stack {
+        width: 80vw;
+
+        .stack--html,
+        .stack--css {
+            height: 115px;
+        }
+
+        .stack--css {
+            float: right;
+        }
+
+        .stack--js {
+            margin-top: 40px;
+            display: block;
+            position: relative;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    .technologies__tools {
+        width: 80vw;
+
+        .title--tools {
+            margin-top: 0;
+        }
+
+        .tool--npm {
+            display: block;
+            position: relative;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%);
+            margin-bottom: 40px;
+        }
+
+        .tool--git,
+        .tool--adobe {
+            height: 99px;
+        }
+
+        .tool--adobe {
+            float: right;
+        }
+
+    }
+}

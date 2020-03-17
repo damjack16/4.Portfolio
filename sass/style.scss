@@ -5,7 +5,7 @@
 @import "contact";
 
 // variables
-$title-size: 48px;
+$title-size: 38px;
 $normal-p-size: 28px;
 $small-p-size: 16px;
 
@@ -24,5 +24,14 @@ section {
 
 svg {
     fill: #fff;
-    width: 39px;
+    // width: 39px;
+}
+
+.title {
+    text-align: center;
+    font-size: $title-size;
+
+    span {
+        font-weight: 200;
+    }
 }
