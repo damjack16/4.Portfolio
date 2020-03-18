@@ -1,0 +1,11 @@
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #321E41;
+
+    .title--contact {
+        margin-top: 0;
+    }
+}

@@ -15,7 +15,7 @@
     <main>
         <!-- HOME -->
         <section class="home" id="home">
-            <div class="home__bgc">
+            <div class="home__bg">
                 <button class="hamburger">
                     <span class="hamburger__box"><span class="hamburger__inner"></span></span>
                 </button>
@@ -111,40 +111,50 @@
         </section>
         <!-- PROJECTS -->
         <section class="projects" id="projects">
-            <h1 class="title title--projects"><span>Proj</span>ects</h1>
-            <div class="project__one">
-                <img src="img/projects/mybooklist_desktop.PNG" alt="Project one logo" class="project__logo">
-                <h2 class="project__title">
-                    MyBookList App
-                </h2>
-                <p>The application allows you to save your favorite book titles on the list. Everything is saved in
-                    local
-                    storage, so you won't lose your list after refreshing your browser.</p>
-                <button class="btn btn--live">Live</button>
-                <button class="btn btn--github">Github</button>
-            </div>
+            <h1 class="title title--projects">Proj<span>ects</span></h1>
+            <div class="projects__bg">
+                <div class="project__one">
+                    <img src="img/projects/mybooklist_desktop.PNG" alt="Project one logo" class="project__logo">
+                    <h2 class="project__title">
+                        MyBookList App
+                    </h2>
+                    <p>The application allows you to save your favorite book titles on the list. Everything is saved in
+                        local
+                        storage, so you won't lose your list after refreshing your browser.</p>
+                    <button onclick="window.open('https://damjack16.github.io/102.BookList-app/');"
+                        class="btn btn--live">Live</button>
+                    <button onclick="window.open('https://github.com/damjack16/102.BookList-app');"
+                        class="btn btn--github">GitHub</button>
+                </div>
 
-            <div class="project__two">
-                <img src="img/projects/challenge1.PNG" alt="Project two logo" class="project__logo">
-                <h2 class="project__title">
-                    PSD template
-                </h2>
-                <p>This is the first project of the "Weekly Webdev Challenge" group. Here we have to complete the fields
-                    register, subscribe, email, recover and sign in. All forms have validation.</p>
-                <button class="btn btn--live">Live</button>
-                <button class="btn btn--github">Github</button>
-            </div>
+                <div class="project__two">
+                    <img src="img/projects/challenge1.PNG" alt="Project two logo" class="project__logo">
+                    <h2 class="project__title">
+                        PSD template
+                    </h2>
+                    <p>This is the first project of the "Weekly Webdev Challenge" group. Here we have to complete the
+                        fields
+                        register, subscribe, email, recover and sign in. All forms have validation.</p>
+                    <button onclick="window.open('https://damjack16.github.io/2.Challenge-1/');"
+                        class="btn btn--live">Live</button>
+                    <button onclick="window.open('https://github.com/damjack16/2.Challenge-1');"
+                        class="btn btn--github">GitHub</button>
+                </div>
 
-            <div class="project__three">
-                <img src="img/projects/country_map.PNG" alt="Project three logo" class="project__logo">
-                <h2 class="project__title">
-                    Country map
-                </h2>
-                <p>In this project, we have the option of being listed from an external API. Information about the
-                    selected country are downloaded from this API and place on the map is from the LEAFLET.JS library
-                </p>
-                <button class="btn btn--live">Live</button>
-                <button class="btn btn--github">Github</button>
+                <div class="project__three">
+                    <img src="img/projects/country_map.PNG" alt="Project three logo" class="project__logo">
+                    <h2 class="project__title">
+                        Country map
+                    </h2>
+                    <p>In this project, we have the option of being listed from an external API. Information about the
+                        selected country are downloaded from this API and place on the map is from the LEAFLET.JS
+                        library
+                    </p>
+                    <button onclick="window.open('https://damjack16.github.io/108.Fetch-API-Country-map/');"
+                        class="btn btn--live">Live</button>
+                    <button onclick="window.open('https://github.com/damjack16/108.Fetch-API-Country-map');"
+                        class="btn btn--github">GitHub</button>
+                </div>
             </div>
         </section>
         <!-- CONTACT -->
@@ -157,6 +167,7 @@
                 <label for="name">Name</label>
                 <input type="text" id="name" placeholder="Enter name" name="name" required>
                 <textarea name="message" placeholder="Type Your Message..." cols="20" rows="9" required></textarea>
+                <button class="btn btn--send" type="submit">Send</button>
             </form>
         </section>
         <!-- FOOTER -->
