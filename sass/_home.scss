@@ -2,6 +2,8 @@
 $title-size: 38px;
 $normal-p-size: 28px;
 $small-p-size: 16px;
+$smallMobile: 320px;
+$mediumMobile: 375px;
 
 @mixin ham-line {
     width: 100%;
@@ -29,8 +31,6 @@ $small-p-size: 16px;
 }
 
 // HAMBURGER
-
-
 .hamburger {
     position: absolute;
     top: 5%;

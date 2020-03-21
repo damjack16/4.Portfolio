@@ -161,7 +161,7 @@
       justify-content: space-around;
   -ms-flex-align: center;
       align-items: center;
-  min-height: 135vh;
+  height: 200vh;
 }
 
 .about .about__p {
@@ -177,11 +177,14 @@
 
 .about .about__icons {
   width: 80%;
-  margin-bottom: 70px;
+  margin-bottom: 100px;
+  position: relative;
+  top: 0;
+  left: 0;
 }
 
 .about .about__icons .icon {
-  position: relative;
+  position: absolute;
   display: inline-block;
   top: 0;
   left: 0;
@@ -193,7 +196,8 @@
 }
 
 .about .about__icons .icon:nth-of-type(2) {
-  left: 50%;
+  left: 100%;
+  transform: translateX(-100%);
 }
 
 .technologies {
@@ -265,7 +269,7 @@
   background-image: url("../img/projects/bg_projects.svg");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 320vh;
+  height: 350vh;
 }
 
 .projects .title--projects {
@@ -350,28 +354,28 @@
   cursor: pointer;
 }
 
-.btn--live {
+.btn--white {
   background-color: #fff;
   text-transform: uppercase;
   margin-bottom: 15px;
-  padding: 13px 55.5px;
+  padding: 13px 0;
   transition: all .3s ease-in-out;
 }
 
-.btn--live:hover {
+.btn--white:hover {
   background-color: #000;
   color: #fff;
   transform: scale(1.1);
 }
 
-.btn--github {
+.btn--black {
   background-color: #000;
   color: #fff;
-  padding: 13px 42.5px;
+  padding: 13px 0;
   transition: all .3s ease-in-out;
 }
 
-.btn--github:hover {
+.btn--black:hover {
   background-color: #fff;
   color: #000;
   transform: scale(1.1);
@@ -385,19 +389,207 @@ p {
 }
 
 .contact {
+  height: 180vh;
+  position: relative;
+  background-image: url("../img/contact/bg_contact.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contact .contact__bg {
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   -ms-flex-align: center;
       align-items: center;
-  background-color: #321E41;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  background-color: #321e41;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
-.contact .title--contact {
-  margin-top: 0;
+.contact .contact__bg .title--contact {
+  margin: 0;
+}
+
+.contact .contact__bg .contact__p {
+  width: 85%;
+  position: relative;
+  top: -4%;
+  font-size: 28px;
+  line-height: 44px;
+  margin: 0;
+}
+
+.contact .contact__bg .contact__form {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  position: relative;
+  top: -7%;
+  width: 60%;
+  height: 75vh;
+  font-size: 28px;
+}
+
+.contact .contact__bg .contact__form .input--box {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: 40px;
+  color: #fff;
+}
+
+.contact .contact__bg .contact__form .input--box label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 40px;
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+  padding: 0 10px;
+  display: block;
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.contact .contact__bg .contact__form .input--box input,
+.contact .contact__bg .contact__form .input--box textarea {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+  padding: 0 10px;
+  z-index: 1;
+  color: #000;
+}
+
+.contact .contact__bg .contact__form .input--box input:focus + .label, .contact .contact__bg .contact__form .input--box input:valid + .label,
+.contact .contact__bg .contact__form .input--box textarea:focus + .label,
+.contact .contact__bg .contact__form .input--box textarea:valid + .label {
+  top: -35px;
+  left: -10px;
+}
+
+.contact .contact__bg .contact__form .input--box input:focus + .label--textarea, .contact .contact__bg .contact__form .input--box input:valid + .label--textarea,
+.contact .contact__bg .contact__form .input--box textarea:focus + .label--textarea,
+.contact .contact__bg .contact__form .input--box textarea:valid + .label--textarea {
+  top: -45px;
+}
+
+.contact .contact__bg .contact__form .input--box input:focus ~ .contact__form--line, .contact .contact__bg .contact__form .input--box input:valid ~ .contact__form--line,
+.contact .contact__bg .contact__form .input--box textarea:focus ~ .contact__form--line,
+.contact .contact__bg .contact__form .input--box textarea:valid ~ .contact__form--line {
+  height: 100%;
+  padding: 0 10px;
+}
+
+.contact .contact__bg .contact__form .input--box input:focus ~ .contact__form--line--textarea, .contact .contact__bg .contact__form .input--box input:valid ~ .contact__form--line--textarea,
+.contact .contact__bg .contact__form .input--box textarea:focus ~ .contact__form--line--textarea,
+.contact .contact__bg .contact__form .input--box textarea:valid ~ .contact__form--line--textarea {
+  padding: 5px 10px;
+}
+
+.contact .contact__bg .contact__form .input--box .contact__form--line {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  transition: 0.5s;
+  border-radius: 2px;
+}
+
+.contact .contact__bg .contact__form .input--textarea {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  padding: 10px 0;
+}
+
+.contact .contact__bg .contact__form .input--textarea textarea {
+  height: 100%;
+  resize: none;
+}
+
+.contact .contact__bg .contact__form .btn--send {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.contact .contact__bg .contact__icons {
+  width: 85%;
+  position: relative;
+  top: -9%;
+  left: 0;
+}
+
+.contact .contact__bg .contact__icons .icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+}
+
+.contact .contact__bg .contact__icons .icon svg {
+  width: 72px;
+  height: 69px;
+}
+
+.contact .contact__bg .contact__icons .icon:nth-of-type(2) {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.contact .contact__bg .contact__icons .icon:nth-of-type(3) {
+  left: 100%;
+  transform: translateX(-100%);
+}
+
+footer {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-align: center;
+      align-items: center;
+  height: 30vh;
+  background-image: url("../img/footer/bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+footer .footer__logo {
+  width: 80px;
+}
+
+footer .footer__p {
+  font-size: 9.5px;
+  font-weight: 700;
+  margin: 0;
 }
 
 body {

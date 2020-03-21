@@ -10,7 +10,7 @@ $small-p-size: 16px;
     background-color: #3D84A8;
     justify-content: space-around;
     align-items: center;
-    min-height: 135vh;
+    height: 200vh;
 
     .about__p {
         width: 80%;
@@ -25,10 +25,13 @@ $small-p-size: 16px;
 
     .about__icons {
         width: 80%;
-        margin-bottom: 70px;
+        margin-bottom: 100px;
+        position: relative;
+        top: 0;
+        left: 0;
 
         .icon {
-            position: relative;
+            position: absolute;
             display: inline-block;
             top: 0;
             left: 0;
@@ -40,7 +43,8 @@ $small-p-size: 16px;
         }
 
         .icon:nth-of-type(2) {
-            left: 50%;
+            left: 100%;
+            transform: translateX(-100%);
         }
     }
 }
