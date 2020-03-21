@@ -2,7 +2,7 @@ footer {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 30vh;
+    height: 50vw;
     background-image: url("../img/footer/bg.svg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -15,5 +15,23 @@ footer {
         font-size: 9.5px;
         font-weight: 700;
         margin: 0;
+    }
+}
+
+// MEDIA QUERIES VARIABLES
+$smallMobile: 320px;
+$mediumMobile: 350px;
+$largeMobile: 480px;
+$tablet: 768px;
+$smallLaptop: 1024px;
+$laptop: 1280px;
+$desktop: 1600px;
+
+// MEDIA QUERIES
+@media only screen (min-width:#{$smallMobile}) and (max-width:#{$mediumMobile - 1px}) {
+    footer {
+        .footer__logo {
+            width: 60px;
+        }
     }
 }

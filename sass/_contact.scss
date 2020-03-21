@@ -11,7 +11,7 @@ $small-p-size: 16px;
 }
 
 .contact {
-    height: 180vh;
+    height: 350vw;
     position: relative;
     background-image: url('../img/contact/bg_contact.jpg');
     background-repeat: no-repeat;
@@ -45,7 +45,7 @@ $small-p-size: 16px;
             position: relative;
             top: -7%;
             width: 60%;
-            height: 75vh;
+            height: 175vw;
             font-size: $normal-p-size;
 
             .input--box {
@@ -163,6 +163,29 @@ $small-p-size: 16px;
             .icon:nth-of-type(3) {
                 left: 100%;
                 transform: translateX(-100%);
+            }
+        }
+    }
+}
+
+// MEDIA QUERIES VARIABLES
+$smallMobile: 320px;
+$mediumMobile: 350px;
+$largeMobile: 480px;
+$tablet: 768px;
+$smallLaptop: 1024px;
+$laptop: 1280px;
+$desktop: 1600px;
+
+// MEDIA QUERIES
+@media only screen (min-width:#{$smallMobile}) and (max-width:#{$mediumMobile - 1px}) {
+    .contact {
+        height: 420vw;
+
+        .contact__bg {
+
+            .contact__form {
+                height: 200vw;
             }
         }
     }

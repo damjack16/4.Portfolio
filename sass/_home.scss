@@ -2,8 +2,7 @@
 $title-size: 38px;
 $normal-p-size: 28px;
 $small-p-size: 16px;
-$smallMobile: 320px;
-$mediumMobile: 375px;
+
 
 @mixin ham-line {
     width: 100%;
@@ -18,7 +17,7 @@ $mediumMobile: 375px;
     background-image: url('../img/home/bg_img_home.png');
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 100vh;
+    height: 100vw;
 
     .home__bg {
         background-color: rgba(72, 70, 109, 0.75);
@@ -168,4 +167,20 @@ $mediumMobile: 375px;
     line-height: 90px;
     transform: translate(-50%, -50%);
     text-transform: uppercase;
+}
+
+// MEDIA QUERIES VARIABLES
+$smallMobile: 320px;
+$mediumMobile: 350px;
+$largeMobile: 480px;
+$tablet: 768px;
+$smallLaptop: 1024px;
+$laptop: 1280px;
+$desktop: 1600px;
+
+// MEDIA QUERIES
+@media only screen (min-width:#{$smallMobile}) and (max-width:#{$mediumMobile - 1px}) {
+    .home {
+        height: 220vw;
+    }
 }

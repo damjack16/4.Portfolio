@@ -3,7 +3,7 @@
   background-image: url("../img/home/bg_img_home.png");
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 100vh;
+  height: 100vw;
 }
 
 .home .home__bg {
@@ -151,6 +151,12 @@
   text-transform: uppercase;
 }
 
+@media (min-width: 320px) and (max-width: 349px) {
+  .home {
+    height: 220vw;
+  }
+}
+
 .about {
   display: -ms-flexbox;
   display: flex;
@@ -161,7 +167,7 @@
       justify-content: space-around;
   -ms-flex-align: center;
       align-items: center;
-  height: 200vh;
+  height: 340vw;
 }
 
 .about .about__p {
@@ -200,6 +206,12 @@
   transform: translateX(-100%);
 }
 
+@media (min-width: 320px) and (max-width: 349px) {
+  .about {
+    height: 380vw;
+  }
+}
+
 .technologies {
   display: -ms-flexbox;
   display: flex;
@@ -213,7 +225,7 @@
   background-image: url("../img/technologies/shape.svg"), url("../img/technologies/bg.svg");
   background-repeat: no-repeat, no-repeat;
   background-size: cover, cover;
-  min-height: 120vh;
+  min-height: 220vw;
 }
 
 .technologies .technologies__stack {
@@ -264,12 +276,18 @@
   float: right;
 }
 
+@media (min-width: 320px) and (max-width: 349px) {
+  .technologies {
+    min-height: 260vw;
+  }
+}
+
 .projects {
   position: relative;
   background-image: url("../img/projects/bg_projects.svg");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 350vh;
+  height: 630vw;
 }
 
 .projects .title--projects {
@@ -388,8 +406,17 @@ p {
   line-height: 25px;
 }
 
+@media (min-width: 320px) and (max-width: 349px) {
+  .projects {
+    height: 700vw;
+  }
+  .projects .projects__bg .project__one .project__logo {
+    width: 280px;
+  }
+}
+
 .contact {
-  height: 180vh;
+  height: 350vw;
   position: relative;
   background-image: url("../img/contact/bg_contact.jpg");
   background-repeat: no-repeat;
@@ -438,7 +465,7 @@ p {
   position: relative;
   top: -7%;
   width: 60%;
-  height: 75vh;
+  height: 175vw;
   font-size: 28px;
 }
 
@@ -569,6 +596,15 @@ p {
   transform: translateX(-100%);
 }
 
+@media (min-width: 320px) and (max-width: 349px) {
+  .contact {
+    height: 420vw;
+  }
+  .contact .contact__bg .contact__form {
+    height: 200vw;
+  }
+}
+
 footer {
   display: -ms-flexbox;
   display: flex;
@@ -576,7 +612,7 @@ footer {
       justify-content: space-around;
   -ms-flex-align: center;
       align-items: center;
-  height: 30vh;
+  height: 50vw;
   background-image: url("../img/footer/bg.svg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -590,6 +626,12 @@ footer .footer__p {
   font-size: 9.5px;
   font-weight: 700;
   margin: 0;
+}
+
+@media (min-width: 320px) and (max-width: 349px) {
+  footer .footer__logo {
+    width: 60px;
+  }
 }
 
 body {

@@ -12,7 +12,7 @@ $small-p-size: 16px;
     background-image: url("../img/technologies/shape.svg"), url("../img/technologies/bg.svg");
     background-repeat: no-repeat, no-repeat;
     background-size: cover, cover;
-    min-height: 120vh;
+    min-height: 220vw;
 
     .technologies__stack {
         width: 80vw;
@@ -61,5 +61,21 @@ $small-p-size: 16px;
             float: right;
         }
 
+    }
+}
+
+// MEDIA QUERIES VARIABLES
+$smallMobile: 320px;
+$mediumMobile: 350px;
+$largeMobile: 480px;
+$tablet: 768px;
+$smallLaptop: 1024px;
+$laptop: 1280px;
+$desktop: 1600px;
+
+// MEDIA QUERIES
+@media only screen (min-width:#{$smallMobile}) and (max-width:#{$mediumMobile - 1px}) {
+    .technologies {
+        min-height: 260vw;
     }
 }

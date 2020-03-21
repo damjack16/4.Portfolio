@@ -15,7 +15,7 @@ $small-p-size: 16px;
     background-image: url("../img/projects/bg_projects.svg");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 350vh;
+    height: 630vw;
 
     .title--projects {
         position: absolute;
@@ -109,4 +109,30 @@ p {
     font-size: $small-p-size;
     margin-bottom: 35px;
     line-height: 25px;
+}
+
+// MEDIA QUERIES VARIABLES
+$smallMobile: 320px;
+$mediumMobile: 350px;
+$largeMobile: 480px;
+$tablet: 768px;
+$smallLaptop: 1024px;
+$laptop: 1280px;
+$desktop: 1600px;
+
+// MEDIA QUERIES
+@media only screen (min-width:#{$smallMobile}) and (max-width:#{$mediumMobile - 1px}) {
+    .projects {
+        height: 700vw;
+
+        .projects__bg {
+            .project__one {
+                .project__logo {
+                    width: 280px
+                }
+            }
+        }
+    }
+
+
 }

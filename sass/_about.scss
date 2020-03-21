@@ -10,7 +10,7 @@ $small-p-size: 16px;
     background-color: #3D84A8;
     justify-content: space-around;
     align-items: center;
-    height: 200vh;
+    height: 340vw;
 
     .about__p {
         width: 80%;
@@ -46,5 +46,21 @@ $small-p-size: 16px;
             left: 100%;
             transform: translateX(-100%);
         }
+    }
+}
+
+// MEDIA QUERIES VARIABLES
+$smallMobile: 320px;
+$mediumMobile: 350px;
+$largeMobile: 480px;
+$tablet: 768px;
+$smallLaptop: 1024px;
+$laptop: 1280px;
+$desktop: 1600px;
+
+// MEDIA QUERIES
+@media only screen (min-width:#{$smallMobile}) and (max-width:#{$mediumMobile - 1px}) {
+    .about {
+        height: 380vw;
     }
 }
