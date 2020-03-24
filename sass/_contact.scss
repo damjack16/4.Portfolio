@@ -27,17 +27,12 @@ $small-p-size: 16px;
         width: 100%;
         height: 100%;
 
-        .title--contact {
-            margin: 0;
-        }
-
         .contact__p {
             width: 85%;
             position: relative;
             top: -4%;
             font-size: $normal-p-size;
             line-height: 44px;
-            margin: 0;
         }
 
         .contact__form {
@@ -178,7 +173,8 @@ $laptop: 1280px;
 $desktop: 1600px;
 
 // MEDIA QUERIES
-@media only screen (min-width:#{$smallMobile}) and (max-width:#{$mediumMobile - 1px}) {
+// FROM 320px to 349px
+@media only screen and (min-width:#{$smallMobile}) and (max-width:#{$mediumMobile - 1px}) {
     .contact {
         height: 420vw;
 
@@ -186,6 +182,32 @@ $desktop: 1600px;
 
             .contact__form {
                 height: 200vw;
+            }
+        }
+    }
+}
+
+// FROM 480px to 767px
+@media only screen and (min-width:#{$largeMobile}) and (max-width:#{$tablet - 1px}) {
+    .contact {
+        height: 180vw;
+
+        .contact__bg {
+            .contact__form {
+                height: 100vw;
+            }
+        }
+    }
+}
+
+// FROM 768px to 1023px
+@media only screen and (min-width:#{$tablet}) and (max-width:#{$smallLaptop - 1px}) {
+    .contact {
+        height: 140vw;
+
+        .contact__bg {
+            .contact__form {
+                height: 80vw;
             }
         }
     }

@@ -12,6 +12,9 @@ $small-p-size: 16px;
     background-image: url("../img/technologies/shape.svg"), url("../img/technologies/bg.svg");
     background-repeat: no-repeat, no-repeat;
     background-size: cover, cover;
+    // background-image: url("../img/technologies/bg_technologies@2x.png");
+    // background-repeat: no-repeat;
+    // background-size: cover;
     min-height: 220vw;
 
     .technologies__stack {
@@ -74,8 +77,25 @@ $laptop: 1280px;
 $desktop: 1600px;
 
 // MEDIA QUERIES
-@media only screen (min-width:#{$smallMobile}) and (max-width:#{$mediumMobile - 1px}) {
+// FROM 320px to 349px
+@media only screen and (min-width:#{$smallMobile}) and (max-width:#{$mediumMobile - 1px}) {
     .technologies {
         min-height: 260vw;
+    }
+}
+
+// FROM 480px to 767px
+@media only screen and (min-width:#{$largeMobile}) and (max-width:#{$tablet - 1px}) {
+    .technologies {
+        min-height: 150vw;
+        background-position: center center, center center;
+    }
+}
+
+// FROM 768px to 1023px
+@media only screen and (min-width:#{$tablet}) and (max-width:#{$smallLaptop - 1px}) {
+    .technologies {
+        min-height: 100vw;
+        background-position: center 70%, center center;
     }
 }
