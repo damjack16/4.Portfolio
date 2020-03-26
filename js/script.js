@@ -38,3 +38,7 @@ document.querySelector(".menu__item--projects").addEventListener('click', () => 
 document.querySelector(".menu__item--contact").addEventListener('click', () => {
     scrollTo(document.getElementById("contact"));
 })
+
+document.querySelector(".btn--contact").addEventListener('click', () => {
+    scrollTo(document.getElementById("contact"));
+})
