@@ -29,7 +29,7 @@ svg {
 }
 
 .title {
-    text-align: center;
+    // text-align: center;
     font-size: $title-size;
 
     span {
@@ -37,6 +37,8 @@ svg {
     }
 }
 
-h1 {
+h1,
+h2,
+.menu__item {
     text-shadow: 6px 6px rgba(0, 0, 0, 0.16);
 }

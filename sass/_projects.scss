@@ -11,6 +11,7 @@ $small-p-size: 16px;
 }
 
 .projects {
+    @include flex;
     position: relative;
     background-image: url("../img/projects/bg_projects.png");
     background-repeat: no-repeat;
@@ -104,7 +105,7 @@ $small-p-size: 16px;
 
 // PARAGRAPHS
 
-p {
+.project--paragraph {
     text-align: center;
     font-size: $small-p-size;
     margin-bottom: 35px;
@@ -147,5 +148,51 @@ $desktop: 1600px;
 @media only screen and (min-width:#{$tablet}) and (max-width:#{$smallLaptop - 1px}) {
     .projects {
         height: 400vw;
+    }
+}
+
+// FROM 1024px to 1279px
+@media only screen and (min-width:#{$smallLaptop}) {
+    .projects {
+        height: 180vw;
+
+        .projects__bg {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto;
+            grid-template-areas:
+                "one ."
+                "one two"
+                "three two"
+                "three .";
+            justify-items: center;
+            width: 90%;
+
+            .project__one {
+                grid-area: one;
+            }
+
+            .project__two {
+                grid-area: two;
+            }
+
+            .project__three {
+                grid-area: three;
+            }
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-image: url("../img/projects/bg_img.svg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
     }
 }

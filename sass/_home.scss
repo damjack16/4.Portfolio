@@ -169,6 +169,7 @@ $small-p-size: 16px;
     line-height: 90px;
     transform: translate(-50%, -50%);
     text-transform: uppercase;
+    text-align: center;
 }
 
 // MEDIA QUERIES VARIABLES
@@ -226,7 +227,7 @@ $desktop: 1600px;
 }
 
 // FROM 1024px to 1279px
-@media only screen and (min-width:#{$smallLaptop}) and (max-width:#{$laptop - 1px}) {
+@media only screen and (min-width:#{$smallLaptop}) {
     .home {
         height: 60vw;
 

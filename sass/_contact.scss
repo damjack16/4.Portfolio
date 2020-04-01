@@ -12,27 +12,29 @@ $small-p-size: 16px;
 
 .contact {
     height: 350vw;
+    width: 100%;
     position: relative;
-    background-image: url('../img/contact/bg_contact.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: rgba(50, 30, 65, 1);
 
 
     .contact__bg {
         @include flex;
-        background-color: rgba(50, 30, 65, 1);
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
 
-        .contact__p {
+        .contact__paragraph {
+            @include flex;
             width: 85%;
-            position: relative;
-            top: -4%;
-            font-size: $normal-p-size;
-            line-height: 44px;
+
+            .contact__p {
+                position: relative;
+                top: -4%;
+                font-size: $normal-p-size;
+                line-height: 44px;
+            }
         }
 
         .contact__form {
@@ -209,6 +211,64 @@ $desktop: 1600px;
             .contact__form {
                 height: 80vw;
             }
+        }
+    }
+}
+
+// FROM 1024px to 1279px
+@media only screen and (min-width:#{$smallLaptop}) {
+    .contact {
+        height: 80vw;
+        background-color: rgba(50, 30, 65, 0.75);
+
+        .contact__bg {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto;
+            grid-template-areas:
+                "paragraph form"
+                "icons form"
+                ". form";
+            justify-items: center;
+            width: 90%;
+            left: 50%;
+            transform: translateX(-50%);
+
+            .contact__paragraph {
+                @include flex;
+                align-items: left;
+                grid-area: paragraph;
+
+                .title--contact {
+                    align-self: flex-start;
+                }
+            }
+
+            .contact__form {
+                grid-area: form;
+                height: 60vw;
+            }
+
+            .contact__icons {
+                grid-area: icons;
+                width: 80%;
+            }
+
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-image: url("../img/contact/bg_contact.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: right;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
         }
     }
 }

@@ -1,3 +1,8 @@
+// variables
+$title-size: 38px;
+$normal-p-size: 28px;
+$small-p-size: 16px;
+
 footer {
     display: flex;
     justify-content: center;
@@ -43,7 +48,7 @@ $desktop: 1600px;
         height: 30vw;
 
         .footer__logo {
-            width: 90px;
+            width: 80px;
         }
     }
 }
@@ -52,5 +57,20 @@ $desktop: 1600px;
 @media only screen and (min-width:#{$tablet}) and (max-width:#{$smallLaptop - 1px}) {
     footer {
         height: 20vw;
+    }
+}
+
+// FROM 1024px to 1279px
+@media only screen and (min-width:#{$smallLaptop}) {
+    footer {
+        height: 15vw;
+
+        .footer__p {
+            font-size: $small-p-size;
+        }
+
+        .footer__logo {
+            width: 80px;
+        }
     }
 }

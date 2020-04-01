@@ -99,3 +99,11 @@ $desktop: 1600px;
         background-position: center 70%, center center;
     }
 }
+
+// FROM 1024px to 1279px
+@media only screen and (min-width:#{$smallLaptop}) {
+    .technologies {
+        min-height: 100vw;
+        background-position: center 70%, center center;
+    }
+}
