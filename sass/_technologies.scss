@@ -1,7 +1,16 @@
 // variables
+$big-title-size: 48px;
 $title-size: 38px;
 $normal-p-size: 28px;
 $small-p-size: 16px;
+
+@mixin grid {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    justify-items: center;
+}
 
 .technologies {
     display: flex;
@@ -12,13 +21,15 @@ $small-p-size: 16px;
     background-image: url("../img/technologies/shape.svg"), url("../img/technologies/bg.svg");
     background-repeat: no-repeat, no-repeat;
     background-size: cover, cover;
-    // background-image: url("../img/technologies/bg_technologies@2x.png");
-    // background-repeat: no-repeat;
-    // background-size: cover;
-    min-height: 220vw;
+    min-height: 240vw;
+
 
     .technologies__stack {
         width: 80vw;
+
+        .title--technologies {
+            text-align: center;
+        }
 
         .stack--html,
         .stack--css {
@@ -43,7 +54,7 @@ $small-p-size: 16px;
         width: 80vw;
 
         .title--tools {
-            margin-top: 0;
+            text-align: center;
         }
 
         .tool--npm {
@@ -67,6 +78,7 @@ $small-p-size: 16px;
     }
 }
 
+
 // MEDIA QUERIES VARIABLES
 $smallMobile: 320px;
 $mediumMobile: 350px;
@@ -75,6 +87,7 @@ $tablet: 768px;
 $smallLaptop: 1024px;
 $laptop: 1280px;
 $desktop: 1600px;
+$bigDesktop: 1900px;
 
 // MEDIA QUERIES
 // FROM 320px to 349px
@@ -105,5 +118,87 @@ $desktop: 1600px;
     .technologies {
         min-height: 100vw;
         background-position: center 70%, center center;
+        background-image: url("../img/technologies/shape2x.svg"), url("../img/technologies/bg2x.svg");
+    }
+}
+
+// FROM 1280px to 1599px
+@media only screen and (min-width:#{$laptop}) {
+    .technologies {
+        min-height: 80vw;
+        background-image: url("../img/technologies/shape2x.svg"), url("../img/technologies/bg2x.svg");
+
+        .technologies__stack {
+            @include grid();
+            grid-template-areas:
+                ". title ."
+                "html css js";
+
+            .title--technologies {
+                grid-area: title;
+                font-size: $big-title-size;
+            }
+
+            .stack--html,
+            .stack--css,
+            .stack--js {
+                height: 189px;
+            }
+
+            .stack--html {
+                grid-area: html;
+            }
+
+            .stack--css {
+                grid-area: css;
+            }
+
+            .stack--js {
+                grid-area: js;
+                top: 0;
+                left: 0;
+                margin-top: 0;
+                transform: translateX(0%);
+            }
+        }
+
+        .technologies__tools {
+            @include grid;
+            grid-template-areas:
+                ". title ."
+                "npm git adobe";
+            align-items: center;
+
+            .title--tools {
+                grid-area: title;
+                font-size: $big-title-size;
+            }
+
+            .tool--npm {
+                top: 0;
+                left: 0;
+                transform: translateX(0%);
+                grid-area: npm;
+                height: 100px;
+                margin: 0;
+            }
+
+            .tool--git {
+                grid-area: git;
+                height: 130px;
+            }
+
+            .tool--adobe {
+                grid-area: adobe;
+                height: 130px;
+            }
+        }
+    }
+}
+
+// FROM 1900px
+@media only screen and (min-width:#{$bigDesktop}) {
+    .technologies {
+        min-height: 55vw;
     }
 }

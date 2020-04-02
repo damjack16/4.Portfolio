@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1366.189" height="1636" viewBox="0 0 1366.189 1636">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.922" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#7ce8b2" stop-opacity="0.749"/>
+      <stop offset="1" stop-color="#1c1439"/>
+    </linearGradient>
+  </defs>
+  <path id="Tło" d="M0,0H1366.189V1636H0Z" fill="url(#linear-gradient)"/>
+</svg>

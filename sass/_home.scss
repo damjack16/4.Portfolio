@@ -1,4 +1,5 @@
 // variables
+$big-title-size: 48px;
 $title-size: 38px;
 $normal-p-size: 28px;
 $small-p-size: 16px;
@@ -17,7 +18,7 @@ $small-p-size: 16px;
     background-image: url('../img/home/bg_img_home.png');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vw;
+    height: 180vw;
 
     .home__bg {
         background-color: rgba(72, 70, 109, 0.75);
@@ -180,6 +181,7 @@ $tablet: 768px;
 $smallLaptop: 1024px;
 $laptop: 1280px;
 $desktop: 1600px;
+$bigDesktop: 1900px;
 
 // MEDIA QUERIES
 // FROM 320px to 349px
@@ -229,7 +231,7 @@ $desktop: 1600px;
 // FROM 1024px to 1279px
 @media only screen and (min-width:#{$smallLaptop}) {
     .home {
-        height: 60vw;
+        height: 70vw;
 
         .home__bg {
             .hamburger {
@@ -290,6 +292,59 @@ $desktop: 1600px;
                 &:last-of-type {
                     display: none;
                 }
+            }
+        }
+    }
+}
+
+// FROM 1280px to 1599px
+@media only screen and (min-width:#{$laptop}) {
+    .home {
+        .home__bg {
+
+            .menu {
+                width: 50%;
+            }
+
+            .home__icons {
+                width: 25%;
+            }
+
+            .btn--contact {
+                margin-left: 15px;
+            }
+
+            .home__logo {
+                width: 153.45px;
+                height: 195px;
+            }
+        }
+    }
+}
+
+// FROM 1600px to 1899px
+@media only screen and (min-width:#{$desktop}) {
+    .home {
+        height: 50vw;
+
+        .home__bg {
+            .menu {
+                width: 45%;
+            }
+        }
+    }
+}
+
+// FROM 1900px
+@media only screen and (min-width:#{$bigDesktop}) {
+    .home {
+        .home__bg {
+            .menu {
+                width: 40%
+            }
+
+            .home__icons {
+                width: 20%;
             }
         }
     }

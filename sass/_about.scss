@@ -1,4 +1,5 @@
 // variables
+$big-title-size: 48px;
 $title-size: 38px;
 $normal-p-size: 28px;
 $small-p-size: 16px;
@@ -70,41 +71,42 @@ $tablet: 768px;
 $smallLaptop: 1024px;
 $laptop: 1280px;
 $desktop: 1600px;
+$bigDesktop: 1900px;
 
 // MEDIA QUERIES
 // FROM 320px to 349px
 @media only screen and (min-width:#{$smallMobile}) and (max-width:#{$mediumMobile - 1px}) {
     .about {
-        height: 420vw;
+        height: 450vw;
     }
 }
 
 // FROM 480px to 767px
 @media only screen and (min-width:#{$largeMobile}) and (max-width:#{$tablet - 1px}) {
     .about {
-        height: 150vw;
+        height: 180vw;
     }
 }
 
 // FROM 768px to 1023px
 @media only screen and (min-width:#{$tablet}) and (max-width:#{$smallLaptop - 1px}) {
     .about {
-        height: 100vw;
+        height: 140vw;
     }
 }
 
 // FROM 1024px to 1279px
 @media only screen and (min-width:#{$smallLaptop}) {
     .about {
-        height: 50vw;
+        height: 70vw;
 
         .about__container {
             display: grid;
             justify-items: center;
             grid-template-columns: 1fr 2fr;
-            grid-template-rows: 0.5fr 0.9fr 0.5fr;
+            grid-template-rows: 0.27fr 0.5fr 0.1fr;
             grid-column-gap: 45px;
-            height: 90%;
+            height: 100%;
             width: 90%;
 
             .title--about {
@@ -147,6 +149,39 @@ $desktop: 1600px;
                 margin: 0;
                 width: 65%;
             }
+        }
+    }
+}
+
+// FROM 1280px to 1599px
+@media only screen and (min-width:#{$laptop}) {
+    .about {
+        height: 50vw;
+    }
+}
+
+// FROM 1600px to 1899px
+@media only screen and (min-width:#{$desktop}) {
+    .about {
+        height: 40vw;
+
+        .about__container {
+            .about__p {
+                width: 80%;
+            }
+        }
+    }
+}
+
+// FROM 1900px
+@media only screen and (min-width:#{$bigDesktop}) {
+    .about {
+        height: 30vw;
+
+        .about__container {
+            grid-template-rows: 0.25fr 0.45fr 0.08fr;
+            grid-column-gap: 0px;
+            width: 80%;
         }
     }
 }

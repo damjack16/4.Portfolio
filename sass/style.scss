@@ -6,6 +6,7 @@
 @import "footer";
 
 // variables
+$big-title-size: 48px;
 $title-size: 38px;
 $normal-p-size: 28px;
 $small-p-size: 16px;
@@ -20,7 +21,7 @@ body {
 }
 
 section {
-    min-height: 100vh;
+    // min-height: 100vh;
 }
 
 svg {

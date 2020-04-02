@@ -1,4 +1,5 @@
 // variables
+$big-title-size: 48px;
 $title-size: 38px;
 $normal-p-size: 28px;
 $small-p-size: 16px;
@@ -13,7 +14,7 @@ $small-p-size: 16px;
 .projects {
     @include flex;
     position: relative;
-    background-image: url("../img/projects/bg_projects.png");
+    background-image: url("../img/projects/bg_projects2x.svg");
     background-repeat: no-repeat;
     background-size: cover;
     height: 630vw;
@@ -120,6 +121,7 @@ $tablet: 768px;
 $smallLaptop: 1024px;
 $laptop: 1280px;
 $desktop: 1600px;
+$bigDesktop: 1900px;
 
 // MEDIA QUERIES
 // FROM 320px to 349px
@@ -132,7 +134,7 @@ $desktop: 1600px;
 // FROM 480px to 767px
 @media only screen and (min-width:#{$largeMobile}) and (max-width:#{$tablet - 1px}) {
     .projects {
-        height: 440vw;
+        height: 480vw;
 
         .projects__bg {
             .project__one {
@@ -147,7 +149,7 @@ $desktop: 1600px;
 // FROM 768px to 1023px
 @media only screen and (min-width:#{$tablet}) and (max-width:#{$smallLaptop - 1px}) {
     .projects {
-        height: 400vw;
+        height: 440vw;
     }
 }
 
@@ -194,5 +196,19 @@ $desktop: 1600px;
             height: 100%;
             z-index: -1;
         }
+    }
+}
+
+// FROM 1600px to 1899px
+@media only screen and (min-width:#{$desktop}) {
+    .projects {
+        height: 155vw;
+    }
+}
+
+// FROM 1900px
+@media only screen and (min-width:#{$bigDesktop}) {
+    .projects {
+        height: 140vw;
     }
 }

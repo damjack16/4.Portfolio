@@ -1,4 +1,5 @@
 // variables
+$big-title-size: 48px;
 $title-size: 38px;
 $normal-p-size: 28px;
 $small-p-size: 16px;
@@ -20,6 +21,7 @@ $small-p-size: 16px;
     .contact__bg {
         @include flex;
         position: absolute;
+        text-align: center;
         top: 0;
         left: 0;
         width: 100%;
@@ -173,6 +175,7 @@ $tablet: 768px;
 $smallLaptop: 1024px;
 $laptop: 1280px;
 $desktop: 1600px;
+$bigDesktop: 1900px;
 
 // MEDIA QUERIES
 // FROM 320px to 349px
@@ -233,6 +236,7 @@ $desktop: 1600px;
             width: 90%;
             left: 50%;
             transform: translateX(-50%);
+            text-align: left;
 
             .contact__paragraph {
                 @include flex;
