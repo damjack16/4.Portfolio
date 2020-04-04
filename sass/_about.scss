@@ -59,7 +59,11 @@ $small-p-size: 16px;
 
     .icon:nth-of-type(2) {
         left: 100%;
-        transform: translateX(-100%);
+        transform: translateX(-100%) scale(1);
+
+        &:hover {
+            transform: translateX(-100%) scale(1.2);
+        }
     }
 }
 

@@ -39,7 +39,34 @@ svg {
 }
 
 h1,
-h2,
-.menu__item {
+h2 {
     text-shadow: 6px 6px rgba(0, 0, 0, 0.16);
+}
+
+// ICONS
+.icon {
+    display: inline-block;
+    transition: transform .2s ease-out;
+
+    &:hover {
+        transform: scale(1.2);
+    }
+}
+
+// ARROW
+.fa-arrow-alt-circle-up {
+    position: fixed;
+    right: 5%;
+    bottom: 4%;
+    z-index: 999;
+    font-size: 60px;
+    color: #000;
+    opacity: 0.5;
+    cursor: pointer;
+    transform: translateX(100vw);
+    transition: all 1s ease-out;
+}
+
+.fa-arrow-alt-circle-up:hover {
+    opacity: 1;
 }

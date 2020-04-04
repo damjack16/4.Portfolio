@@ -156,12 +156,20 @@ $small-p-size: 16px;
 
             .icon:nth-of-type(2) {
                 left: 50%;
-                transform: translateX(-50%);
+                transform: translateX(-50%) scale(1.0);
+
+                &:hover {
+                    transform: translateX(-50%) scale(1.2);
+                }
             }
 
             .icon:nth-of-type(3) {
                 left: 100%;
-                transform: translateX(-100%);
+                transform: translateX(-100%) scale(1.0);
+
+                &:hover {
+                    transform: translateX(-100%) scale(1.2);
+                }
             }
         }
     }

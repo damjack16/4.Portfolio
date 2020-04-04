@@ -42,3 +42,28 @@ document.querySelector(".menu__item--contact").addEventListener('click', () => {
 document.querySelector(".btn--contact").addEventListener('click', () => {
     scrollTo(document.getElementById("contact"));
 })
+
+// ARROW UP
+document.querySelector(".fa-arrow-alt-circle-up").addEventListener('click', () => {
+    scrollTo(document.getElementById("home"));
+})
+
+// VISIBLE ARROW AND SECTIONS
+const visibleElements = () => {
+    const arrow = document.querySelector('.fa-arrow-alt-circle-up');
+
+    const windowHeight = window.innerHeight;
+    const scrollValue = window.scrollY;
+    // ABOUT SECTION
+    const about = document.querySelector('.about');
+    const aboutFromTop = about.offsetHeight;
+    const aboutHeight = about.offsetHeight;
+
+    // ARROW
+    if (scrollValue > aboutFromTop + aboutHeight) {
+        arrow.style.transform = "translateX(0)"
+    } else {
+        arrow.style.transform = "translateX(100vw)"
+    }
+}
+window.addEventListener('scroll', visibleElements)

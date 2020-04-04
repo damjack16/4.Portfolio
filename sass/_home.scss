@@ -18,7 +18,7 @@ $small-p-size: 16px;
     background-image: url('../img/home/bg_img_home.png');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 180vw;
+    height: 190vw;
 
     .home__bg {
         background-color: rgba(72, 70, 109, 0.75);
@@ -138,6 +138,11 @@ $small-p-size: 16px;
 
     .icon {
         display: inline-block;
+        transition: transform .2s ease-out;
+
+        &:hover {
+            transform: scale(1.2);
+        }
 
         svg {
             width: 39px;
@@ -237,6 +242,14 @@ $bigDesktop: 1900px;
             .hamburger {
                 display: none;
             }
+
+            .menu {
+                .menu__list {
+                    .menu__item {
+                        text-shadow: 6px 6px rgba(0, 0, 0, 0.16);
+                    }
+                }
+            }
         }
     }
 
@@ -287,7 +300,28 @@ $bigDesktop: 1900px;
 
                 a {
                     color: #fff;
+                    position: relative;
+                    display: block;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        display: block;
+                        width: 0;
+                        height: 2px;
+                        left: 0;
+                        background: #F6F5F6;
+                        border-radius: 49%;
+                        transition: width .3s ease;
+                    }
+
+                    &:hover::after {
+                        width: 100%;
+                        background: #F6F5F6;
+                    }
                 }
+
+
 
                 &:last-of-type {
                     display: none;
