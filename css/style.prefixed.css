@@ -322,6 +322,8 @@
   -ms-flex-direction: column;
       flex-direction: column;
   height: 320vw;
+  transform: translateX(100vw);
+  transition: all .5s ease-out;
 }
 
 .about .about__container .about__p {
@@ -602,6 +604,8 @@
     -ms-grid-rows: auto;
         grid-template-rows: auto;
     justify-items: center;
+    transform: translateX(-100vw);
+    transition: all .5s ease-out;
     grid-template-areas: ". title ." "html css js";
   }
   .technologies .technologies__stack .title--technologies {
@@ -636,6 +640,8 @@
     -ms-grid-rows: auto;
         grid-template-rows: auto;
     justify-items: center;
+    transform: translateX(100vw);
+    transition: all .5s ease-out;
     grid-template-areas: ". title ." "npm git adobe";
     -ms-flex-align: center;
         align-items: center;
@@ -706,6 +712,8 @@
 }
 
 .projects .projects__bg .project__one {
+  transform: translateX(-100vw);
+  transition: all .5s ease-out;
   margin-top: 80px;
   display: -ms-flexbox;
   display: flex;
@@ -723,6 +731,8 @@
 }
 
 .projects .projects__bg .project__two {
+  transform: translateX(100vw);
+  transition: all .5s ease-out;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
@@ -739,6 +749,8 @@
 }
 
 .projects .projects__bg .project__three {
+  transform: translateX(-100vw);
+  transition: all .5s ease-out;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
@@ -1218,6 +1230,7 @@ body {
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
   color: #fff;
+  overflow-x: hidden;
 }
 
 svg {
@@ -1256,11 +1269,7 @@ h2 {
   opacity: 0.5;
   cursor: pointer;
   transform: translateX(100vw);
-  transition: all 1s ease-out;
-}
-
-.fa-arrow-alt-circle-up .active {
-  transform: translateX(0);
+  transition: all .8s ease-out;
 }
 
 .fa-arrow-alt-circle-up:hover {

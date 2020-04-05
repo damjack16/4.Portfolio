@@ -17,7 +17,8 @@ body {
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
-    color: #fff
+    color: #fff;
+    overflow-x: hidden;
 }
 
 section {
@@ -64,7 +65,7 @@ h2 {
     opacity: 0.5;
     cursor: pointer;
     transform: translateX(100vw);
-    transition: all 1s ease-out;
+    transition: all .8s ease-out;
 }
 
 .fa-arrow-alt-circle-up:hover {
