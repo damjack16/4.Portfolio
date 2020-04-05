@@ -8,6 +8,7 @@
     <meta name="description" content="Welcome. My name is Damian Jackiewicz. Beginner Web Developer!">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap&subset=latin-ext"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -15,7 +16,8 @@
     <main>
         <!-- HOME -->
         <section class="home" id="home">
-            <i class="far fa-arrow-alt-circle-up fa-4xs"></i>
+            <i class="far fa-arrow-alt-circle-up fa-4xs" data-aos="fade-left"
+                data-aos-anchor=".technologies__stack"></i>
             <div class="home__bg">
                 <button class="hamburger">
                     <span class="hamburger__box"><span class="hamburger__inner"></span></span>
@@ -61,7 +63,7 @@
         </section>
         <!-- ABOUT -->
         <section class="about" id="about">
-            <div class="about__container">
+            <div class="about__container" data-aos="fade-left">
                 <h1 class="title title--about">Ab<span>out</span> Me</h1>
                 <img srcset="img/about/me_small.png" alt="Author photo" class="about__img--small">
                 <img srcset="img/about/me_big.png" alt="Author photo" class="about__img--large">
@@ -99,13 +101,13 @@
         </section>
         <!-- TECHNOLOGIES -->
         <section class="technologies" id="technologies">
-            <div class="technologies__stack">
+            <div class="technologies__stack" data-aos="fade-down">
                 <h1 class="title title--technologies">Techno<span>logies</span></h1>
                 <img src="img/technologies/html5.svg" alt="HTML5 logo" class="stack stack--html">
                 <img src="img/technologies/css3.svg" alt="CSS3 logo" class="stack stack--css">
                 <img src="img/technologies/js.svg" alt="CSS3 logo" class="stack stack--js">
             </div>
-            <div class="technologies__tools">
+            <div class="technologies__tools" data-aos="fade-up">
                 <h1 class="title title--tools">To<span>ols</span></h1>
                 <img src="img/technologies/npm.svg" alt="NPM logo" class="tool--npm">
                 <img src="img/technologies/git.svg" alt="Git logo" class="tool tool--git">
@@ -116,7 +118,7 @@
         <section class="projects" id="projects">
             <h1 class="title title--projects">Proj<span>ects</span></h1>
             <div class="projects__bg">
-                <div class="project__one">
+                <div class="project__one" data-aos="flip-left">
                     <img src="img/projects/mybooklist_desktop.PNG" alt="Project one logo" class="project__logo">
                     <h2 class="project__title">
                         MyBookList App
@@ -131,7 +133,7 @@
                         class="btn btn--black">GitHub</button>
                 </div>
 
-                <div class="project__two">
+                <div class="project__two" data-aos="flip-right">
                     <img src="img/projects/challenge1.PNG" alt="Project two logo" class="project__logo">
                     <h2 class="project__title">
                         PSD template
@@ -146,7 +148,7 @@
                         class="btn btn--black">GitHub</button>
                 </div>
 
-                <div class="project__three">
+                <div class="project__three" data-aos="flip-left">
                     <img src="img/projects/country_map.PNG" alt="Project three logo" class="project__logo">
                     <h2 class="project__title">
                         Country map
@@ -167,7 +169,7 @@
         <!-- CONTACT -->
         <section class="contact" id="contact">
             <div class="contact__bg">
-                <div class="contact__paragraph">
+                <div class="contact__paragraph" data-aos="zoom-in-down">
                     <h1 class="title title--contact">Cont<span>act</span></h1>
                     <p class="contact__p">Feel free to contact me via the form. Below you can find links to my CV,
                         profile
@@ -175,7 +177,7 @@
                         GitHub
                         and LinkedIn</p>
                 </div>
-                <form class="contact__form">
+                <form class="contact__form" data-aos="zoom-in-down">
                     <div class="input--box">
                         <input type="text" id="email" name="email" required>
                         <label for="email" class="label">E-mail</label>
@@ -194,7 +196,7 @@
                     </div>
                     <button class="btn btn--white btn--send" type="submit">Send</button>
                 </form>
-                <div class="contact__icons">
+                <div class="contact__icons" data-aos="zoom-in-down">
                     <div class="icon"><a href="https://github.com/damjack16" target="_blank">
                             <svg viewbox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="icon--github">
                                 <path
@@ -236,8 +238,9 @@
             <p class="footer__p">@ 2020 Damian Jackiewicz. All rights reserved</p>
         </footer>
     </main>
-    <script src="js/script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="https://kit.fontawesome.com/f53b3403c6.js" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

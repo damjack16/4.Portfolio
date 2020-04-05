@@ -21,17 +21,11 @@ body {
     overflow-x: hidden;
 }
 
-section {
-    // min-height: 100vh;
-}
-
 svg {
     fill: #fff;
-    // width: 39px;
 }
 
 .title {
-    // text-align: center;
     font-size: $title-size;
 
     span {
@@ -62,7 +56,7 @@ h2 {
     z-index: 999;
     font-size: 60px;
     color: #000;
-    opacity: 0.5;
+    opacity: 0.4;
     cursor: pointer;
     transform: translateX(100vw);
     transition: all .8s ease-out;

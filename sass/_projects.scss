@@ -34,8 +34,6 @@ $small-p-size: 16px;
 
 
         .project__one {
-            transform: translateX(-100vw);
-            transition: all .5s ease-out;
             margin-top: 80px;
             @include flex;
             width: 85%;
@@ -46,8 +44,6 @@ $small-p-size: 16px;
         }
 
         .project__two {
-            transform: translateX(100vw);
-            transition: all .5s ease-out;
             @include flex;
             width: 85%;
 
@@ -57,8 +53,6 @@ $small-p-size: 16px;
         }
 
         .project__three {
-            transform: translateX(-100vw);
-            transition: all .5s ease-out;
             @include flex;
             width: 85%;
 

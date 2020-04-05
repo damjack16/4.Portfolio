@@ -23,7 +23,6 @@ $small-p-size: 16px;
     background-size: cover, cover;
     min-height: 240vw;
 
-
     .technologies__stack {
         width: 80vw;
 
@@ -130,8 +129,6 @@ $bigDesktop: 1900px;
 
         .technologies__stack {
             @include grid();
-            transform: translateX(-100vw);
-            transition: all .5s ease-out;
             grid-template-areas:
                 ". title ."
                 "html css js";
@@ -166,8 +163,6 @@ $bigDesktop: 1900px;
 
         .technologies__tools {
             @include grid;
-            transform: translateX(100vw);
-            transition: all .5s ease-out;
             grid-template-areas:
                 ". title ."
                 "npm git adobe";
