@@ -653,7 +653,16 @@
 }
 
 .projects .projects__bg .project__one .project__logo {
+  position: relative;
+  border-radius: 2% 2% 0% 0% / 2% 2% 0% 0%;
+  box-shadow: 20px 20px rgba(0, 0, 0, 0.15);
+  transition: all .4s ease;
   width: 95%;
+}
+
+.projects .projects__bg .project__one .project__logo:hover {
+  border-radius: 2% 2% 50% 50% / 2% 2% 5% 5%;
+  box-shadow: 10px 10px rgba(0, 0, 0, 0.25);
 }
 
 .projects .projects__bg .project__two {
@@ -665,7 +674,16 @@
 }
 
 .projects .projects__bg .project__two .project__logo {
+  position: relative;
+  border-radius: 2% 2% 0% 0% / 2% 2% 0% 0%;
+  box-shadow: 20px 20px rgba(0, 0, 0, 0.15);
+  transition: all .4s ease;
   width: 75%;
+}
+
+.projects .projects__bg .project__two .project__logo:hover {
+  border-radius: 2% 2% 50% 50% / 2% 2% 5% 5%;
+  box-shadow: 10px 10px rgba(0, 0, 0, 0.25);
 }
 
 .projects .projects__bg .project__three {
@@ -677,7 +695,16 @@
 }
 
 .projects .projects__bg .project__three .project__logo {
+  position: relative;
+  border-radius: 2% 2% 0% 0% / 2% 2% 0% 0%;
+  box-shadow: 20px 20px rgba(0, 0, 0, 0.15);
+  transition: all .4s ease;
   width: 75%;
+}
+
+.projects .projects__bg .project__three .project__logo:hover {
+  border-radius: 2% 2% 50% 50% / 2% 2% 5% 5%;
+  box-shadow: 10px 10px rgba(0, 0, 0, 0.25);
 }
 
 .btn {
