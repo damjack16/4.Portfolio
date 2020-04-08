@@ -4,17 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Damian Jackiewicz</title>
+    <title>Damian Jackiewicz - Beginner Web Developer</title>
     <meta name="description" content="Welcome. My name is Damian Jackiewicz. Beginner Web Developer!">
     <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="msapplication-config" content="/favicon/browserconfig.xml">
+    <meta name="msapplication-config" content="favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/favicon/site.webmanifest">
-    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="favicon/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap&subset=latin-ext"
         rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -28,16 +28,24 @@
             <i class="far fa-arrow-alt-circle-up fa-4xs" data-aos="fade-left"
                 data-aos-anchor=".technologies__stack"></i>
             <div class="home__bg">
-                <button class="hamburger">
+                <button class="hamburger jsHamburger">
                     <span class="hamburger__box"><span class="hamburger__inner"></span></span>
                 </button>
-                <nav class="menu">
-                    <ul class="menu__list">
-                        <li class="menu__item"><a href="#/" class="menu__item--home">Home</a></li>
-                        <li class="menu__item"><a href="#/" class="menu__item--about">About</a></li>
-                        <li class="menu__item"><a href="#/" class="menu__item--technologies">Technologies</a></li>
-                        <li class="menu__item"><a href="#/" class="menu__item--projects">Projects</a></li>
-                        <li class="menu__item"><a href="#/" class="menu__item--contact">Contact</a></li>
+                <nav class="menu jsNav">
+                    <ul class="menu__list jsMenu">
+                        <li class="menu__item jsMenuItem"><a href="#/" class="menu__item--home"
+                                data-dest="home">Home</a>
+                        </li>
+                        <li class="menu__item jsMenuItem"><a href="#/" class="menu__item--about"
+                                data-dest="about">About</a>
+                        </li>
+                        <li class="menu__item jsMenuItem"><a href="#/" class="menu__item--technologies"
+                                data-dest="technologies">Technologies</a>
+                        </li>
+                        <li class="menu__item jsMenuItem"><a href="#/" class="menu__item--projects"
+                                data-dest="projects">Projects</a></li>
+                        <li class="menu__item jsMenuItem"><a href="#/" class="menu__item--contact"
+                                data-dest="contact">Contact</a></li>
                     </ul>
                 </nav>
                 <div class="home__icons">
@@ -186,7 +194,7 @@
                         GitHub
                         and LinkedIn</p>
                 </div>
-                <form class="contact__form" data-aos="zoom-in-down" method="POST" action="contact.php">
+                <form class="contact__form" data-aos="zoom-in-down" method="POST" action="contactform.php">
                     <div class="input--box">
                         <input type="text" id="email" name="email" required>
                         <label for="email" class="label">E-mail</label>
@@ -195,6 +203,11 @@
                     <div class="input--box">
                         <input type="text" id="name" name="name" required>
                         <label for="name" class="label">Name</label>
+                        <span class="contact__form--line"></span>
+                    </div>
+                    <div class="input--box">
+                        <input type="text" id="subject" name="subject" required>
+                        <label for="subject" class="label">Subject</label>
                         <span class="contact__form--line"></span>
                     </div>
                     <div class="input--box input--textarea">

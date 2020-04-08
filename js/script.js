@@ -1,6 +1,6 @@
 // HAMBURGER AND MENU
-const hamburger = document.querySelector('.hamburger');
-const nav = document.querySelector('.menu');
+const hamburger = document.querySelector('.jsHamburger');
+const nav = document.querySelector('.jsNav');
 
 const hamburgerClick = () => {
     hamburger.classList.toggle('hamburger--active');
@@ -10,42 +10,35 @@ const hamburgerClick = () => {
 hamburger.addEventListener('click', hamburgerClick);
 
 // SMOOTH SCROLL
-scrollTo = (element) => {
-    window.scroll({
-        behavior: 'smooth',
-        left: 0,
-        top: element.offsetTop,
+document.addEventListener('DOMContentLoaded', () => {
+    const scrollIt = (element) => {
+        window.scrollTo({
+            'behavior': 'smooth',
+            'left': 0,
+            'top': element.offsetTop,
+        });
+    };
+
+    const menuEvents = () => {
+        const menu = document.querySelector('.jsMenu'),
+            menuItems = menu.querySelectorAll('.jsMenuItem');
+
+        menuItems.forEach(item => {
+            item.addEventListener('click', function () {
+                const link = item.querySelector('a');
+                const dest = link.getAttribute('data-dest');
+                const destElem = document.getElementById(dest);
+
+                scrollIt(destElem)
+            });
+        });
+    };
+    menuEvents();
+
+    // ARROW UP
+    document.querySelector(".fa-arrow-alt-circle-up").addEventListener('click', () => {
+        scrollIt(document.getElementById("home"));
     })
-
-}
-
-document.querySelector(".menu__item--home").addEventListener('click', () => {
-    scrollTo(document.getElementById("home"));
-})
-
-document.querySelector(".menu__item--about").addEventListener('click', () => {
-    scrollTo(document.getElementById("about"));
-})
-
-document.querySelector(".menu__item--technologies").addEventListener('click', () => {
-    scrollTo(document.getElementById("technologies"));
-})
-
-document.querySelector(".menu__item--projects").addEventListener('click', () => {
-    scrollTo(document.getElementById("projects"));
-})
-
-document.querySelector(".menu__item--contact").addEventListener('click', () => {
-    scrollTo(document.getElementById("contact"));
-})
-
-document.querySelector(".btn--contact").addEventListener('click', () => {
-    scrollTo(document.getElementById("contact"));
-})
-
-// ARROW UP
-document.querySelector(".fa-arrow-alt-circle-up").addEventListener('click', () => {
-    scrollTo(document.getElementById("home"));
 })
 
 // INITIALIZE ANIMATE ON SCROLL LIBRARY
