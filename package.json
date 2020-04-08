@@ -33,6 +33,7 @@
     "onchange": "^6.1.0"
   },
   "dependencies": {
+    "firebase-admin": "^8.10.0",
     "superagent": "^5.2.2"
   }
 }

@@ -35,6 +35,11 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     menuEvents();
 
+    // CONTACT BUTTON
+    document.querySelector('.btn--contact').addEventListener('click', () => {
+        scrollIt(document.getElementById("contact"));
+    })
+
     // ARROW UP
     document.querySelector(".fa-arrow-alt-circle-up").addEventListener('click', () => {
         scrollIt(document.getElementById("home"));
@@ -46,3 +51,8 @@ AOS.init({
     offset: 200,
     duration: 800,
 });
+
+// RESET PREVENT DEFAULT ON SEND BUTTON
+document.querySelector('.btn--send').addEventListener('click', (e) => {
+    e.preventDefault()
+})

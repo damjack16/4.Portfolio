@@ -11,6 +11,15 @@ $small-p-size: 16px;
     flex-direction: column;
 }
 
+@mixin jsAlert {
+    position: absolute;
+    top: 79%;
+    width: 100%;
+    font-size: $small-p-size;
+    font-weight: bold;
+    text-align: center;
+}
+
 .contact {
     height: 350vw;
     width: 100%;
@@ -130,10 +139,22 @@ $small-p-size: 16px;
                 }
             }
 
+            // JS paragraphs to contact form
+            .jsAlertRed {
+                @include jsAlert;
+                color: #FF1419;
+            }
+
+            .jsAlertGreen {
+                @include jsAlert;
+                color: #2BFF31;
+            }
+
             .btn--send {
                 padding-right: 0;
                 padding-left: 0;
             }
+
         }
 
         .contact__icons {

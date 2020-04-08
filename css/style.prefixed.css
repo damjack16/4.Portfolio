@@ -1053,6 +1053,26 @@
   resize: none;
 }
 
+.contact .contact__bg .contact__form .jsAlertRed {
+  position: absolute;
+  top: 79%;
+  width: 100%;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  color: #FF1419;
+}
+
+.contact .contact__bg .contact__form .jsAlertGreen {
+  position: absolute;
+  top: 79%;
+  width: 100%;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  color: #2BFF31;
+}
+
 .contact .contact__bg .contact__form .btn--send {
   padding-right: 0;
   padding-left: 0;

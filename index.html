@@ -194,7 +194,7 @@
                         GitHub
                         and LinkedIn</p>
                 </div>
-                <form class="contact__form" data-aos="zoom-in-down" method="POST" action="contactform.php">
+                <form class="contact__form jsContactForm" id="contactForm" data-aos="zoom-in-down">
                     <div class="input--box">
                         <input type="text" id="email" name="email" required>
                         <label for="email" class="label">E-mail</label>
@@ -211,12 +211,12 @@
                         <span class="contact__form--line"></span>
                     </div>
                     <div class="input--box input--textarea">
-                        <textarea name="message" cols="20" rows="9" required></textarea>
+                        <textarea name="message" id="message" cols="20" rows="9" required></textarea>
                         <label for="textarea" class="label label--textarea">Type your message
                             here...</label>
                         <span class="contact__form--line contact__form--line--textarea"></span>
                     </div>
-                    <button class="btn btn--white btn--send" type="submit">Send</button>
+                    <button class="btn btn--white btn--send jsBtnSend" type="submit">Send</button>
                 </form>
                 <div class="contact__icons" data-aos="zoom-in-down">
                     <!-- GITHUB ICON -->
@@ -265,6 +265,10 @@
     </main>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="https://kit.fontawesome.com/f53b3403c6.js" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-analytics.js"></script>
+    <script src="js/firebase.js"></script>
     <script src="js/script.js"></script>
 </body>
 
