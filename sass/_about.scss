@@ -16,6 +16,7 @@ $small-p-size: 16px;
     @include flex;
     background-color: #3D84A8;
     height: 340vw;
+    overflow-x: hidden;
 
     .about__container {
         @include flex;

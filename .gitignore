@@ -108,3 +108,6 @@ dist
 
 #php contact form
 contactform.php
+
+#htaccess file
+.htaccess
