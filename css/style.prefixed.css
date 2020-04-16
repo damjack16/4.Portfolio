@@ -4,6 +4,8 @@
   background-repeat: no-repeat;
   background-size: cover;
   height: 190vw;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .home .home__bg {
@@ -310,6 +312,8 @@
       flex-direction: column;
   background-color: #3D84A8;
   height: 340vw;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .about .about__container {
@@ -321,7 +325,7 @@
       align-items: center;
   -ms-flex-direction: column;
       flex-direction: column;
-  height: 320vw;
+  height: 340vw;
 }
 
 .about .about__container .about__p {
@@ -1265,7 +1269,6 @@ body {
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
   color: #fff;
-  overflow-x: hidden;
 }
 
 svg {
