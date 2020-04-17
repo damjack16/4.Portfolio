@@ -21,7 +21,7 @@ const submitBtn = document.querySelector('.jsBtnSend');
 let userName = document.getElementById('name');
 let userEmail = document.getElementById('email');
 let userSubject = document.getElementById('subject');
-let userMessage = document.getElementById('message');
+let userMessage = document.getElementById('textarea');
 
 // Function to clear inputs
 const clearInputs = () => {
