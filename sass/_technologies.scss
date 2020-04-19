@@ -7,9 +7,8 @@ $small-p-size: 16px;
 @mixin grid {
     display: grid;
     justify-items: center;
-    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
-    justify-items: center;
+    align-items: center;
 }
 
 .technologies {
@@ -24,28 +23,37 @@ $small-p-size: 16px;
     min-height: 240vw;
 
     .technologies__stack {
-        width: 80vw;
+        @include grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+            "title title title"
+            "html . css"
+            "sass . js";
+        row-gap: 50px;
+        margin: 0 15px;
 
         .title--technologies {
+            grid-area: title;
             text-align: center;
         }
 
-        .stack--html,
-        .stack--css {
+        .stack--html {
+            grid-area: html;
             height: 115px;
         }
 
         .stack--css {
-            float: right;
+            grid-area: css;
+            height: 115px;
         }
 
         .stack--js {
-            margin-top: 40px;
-            display: block;
-            position: relative;
-            left: 50%;
-            top: 50%;
-            transform: translateX(-50%);
+            grid-area: js;
+        }
+
+        .stack--sass {
+            grid-area: sass;
+            height: 115px;
         }
     }
 
@@ -97,15 +105,15 @@ $bigDesktop: 1900px;
 }
 
 // FROM 480px to 767px
-@media only screen and (min-width:#{$largeMobile}) and (max-width:#{$tablet - 1px}) {
+@media only screen and (min-width:#{$largeMobile}) {
     .technologies {
-        min-height: 150vw;
+        min-height: 180vw;
         background-position: center center, center center;
     }
 }
 
 // FROM 768px to 1023px
-@media only screen and (min-width:#{$tablet}) and (max-width:#{$smallLaptop - 1px}) {
+@media only screen and (min-width:#{$tablet}) {
     .technologies {
         min-height: 100vw;
         background-position: center 70%, center center;
@@ -118,6 +126,13 @@ $bigDesktop: 1900px;
         min-height: 100vw;
         background-position: center 70%, center center;
         background-image: url("../img/technologies/shape2x.svg"), url("../img/technologies/bg2x.svg");
+
+        .technologies__stack {
+            grid-template-areas:
+                ". title ."
+                "html css sass"
+                ". js .";
+        }
     }
 }
 
@@ -128,13 +143,7 @@ $bigDesktop: 1900px;
         background-image: url("../img/technologies/shape2x.svg"), url("../img/technologies/bg2x.svg");
 
         .technologies__stack {
-            @include grid();
-            grid-template-areas:
-                ". title ."
-                "html css js";
-
             .title--technologies {
-                grid-area: title;
                 font-size: $big-title-size;
             }
 
@@ -144,16 +153,7 @@ $bigDesktop: 1900px;
                 height: 189px;
             }
 
-            .stack--html {
-                grid-area: html;
-            }
-
-            .stack--css {
-                grid-area: css;
-            }
-
             .stack--js {
-                grid-area: js;
                 top: 0;
                 left: 0;
                 margin-top: 0;
@@ -163,6 +163,7 @@ $bigDesktop: 1900px;
 
         .technologies__tools {
             @include grid;
+            grid-template-columns: 1fr 1fr 1fr;
             grid-template-areas:
                 ". title ."
                 "npm git adobe";

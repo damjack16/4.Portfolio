@@ -367,7 +367,7 @@
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
   .about {
-    height: 180vw;
+    height: 210vw;
   }
 }
 
@@ -467,29 +467,38 @@
 }
 
 .technologies .technologies__stack {
-  width: 80vw;
+  display: grid;
+  justify-items: center;
+  grid-template-rows: auto;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "title title title" "html . css" "sass . js";
+  row-gap: 50px;
+  margin: 0 15px;
 }
 
 .technologies .technologies__stack .title--technologies {
+  grid-area: title;
   text-align: center;
 }
 
-.technologies .technologies__stack .stack--html,
-.technologies .technologies__stack .stack--css {
+.technologies .technologies__stack .stack--html {
+  grid-area: html;
   height: 115px;
 }
 
 .technologies .technologies__stack .stack--css {
-  float: right;
+  grid-area: css;
+  height: 115px;
 }
 
 .technologies .technologies__stack .stack--js {
-  margin-top: 40px;
-  display: block;
-  position: relative;
-  left: 50%;
-  top: 50%;
-  transform: translateX(-50%);
+  grid-area: js;
+}
+
+.technologies .technologies__stack .stack--sass {
+  grid-area: sass;
+  height: 115px;
 }
 
 .technologies .technologies__tools {
@@ -524,14 +533,14 @@
   }
 }
 
-@media only screen and (min-width: 480px) and (max-width: 767px) {
+@media only screen and (min-width: 480px) {
   .technologies {
-    min-height: 150vw;
+    min-height: 180vw;
     background-position: center center, center center;
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
+@media only screen and (min-width: 768px) {
   .technologies {
     min-height: 100vw;
     background-position: center 70%, center center;
@@ -544,6 +553,9 @@
     background-position: center 70%, center center;
     background-image: url("../img/technologies/shape2x.svg"), url("../img/technologies/bg2x.svg");
   }
+  .technologies .technologies__stack {
+    grid-template-areas: ". title ." "html css sass" ". js .";
+  }
 }
 
 @media only screen and (min-width: 1280px) {
@@ -551,16 +563,7 @@
     min-height: 80vw;
     background-image: url("../img/technologies/shape2x.svg"), url("../img/technologies/bg2x.svg");
   }
-  .technologies .technologies__stack {
-    display: grid;
-    justify-items: center;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    justify-items: center;
-    grid-template-areas: ". title ." "html css js";
-  }
   .technologies .technologies__stack .title--technologies {
-    grid-area: title;
     font-size: 48px;
   }
   .technologies .technologies__stack .stack--html,
@@ -568,14 +571,7 @@
   .technologies .technologies__stack .stack--js {
     height: 189px;
   }
-  .technologies .technologies__stack .stack--html {
-    grid-area: html;
-  }
-  .technologies .technologies__stack .stack--css {
-    grid-area: css;
-  }
   .technologies .technologies__stack .stack--js {
-    grid-area: js;
     top: 0;
     left: 0;
     margin-top: 0;
@@ -584,9 +580,9 @@
   .technologies .technologies__tools {
     display: grid;
     justify-items: center;
-    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
-    justify-items: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: ". title ." "npm git adobe";
     align-items: center;
   }
@@ -1036,7 +1032,7 @@
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
   .contact {
-    height: 180vw;
+    height: 200vw;
   }
   .contact .contact__bg .contact__form {
     height: 100vw;

@@ -224,7 +224,7 @@ $bigDesktop: 1900px;
 // FROM 480px to 767px
 @media only screen and (min-width:#{$largeMobile}) and (max-width:#{$tablet - 1px}) {
     .contact {
-        height: 180vw;
+        height: 200vw;
 
         .contact__bg {
             .contact__form {
