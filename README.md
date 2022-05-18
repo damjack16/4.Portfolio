@@ -16,4 +16,4 @@
 Project is: *Done*
 
 ## Contact
-Created by [Damian Jackiewicz](https://djackiewicz.pl/) - feel free to contact me!
+Created by [Damian Jackiewicz](https://damjack16.github.io/4.Portfolio/) - feel free to contact me!
